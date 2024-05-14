@@ -3,7 +3,7 @@ import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
 import  Newsletter from '../components/Newsletter';
 
 const Footer = () => (
-  <section className="w-full relative z-1 flex justify-start items-center flex-col" id="contact">
+  <section className="w-full relative z-1 flex justify-start items-center flex-col mt-10" id="contact">
     <Newsletter />
 
     <div className="w-full flex flex-col md:flex-row justify-between items-center mt-[5rem] px-6 gap-6">

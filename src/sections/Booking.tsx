@@ -1,16 +1,10 @@
 import Trial from './Trial';
 import { useState, useTransition,useEffect } from 'react';
 
+
+
 const Booking = () => {
  
-/*   const [selectedTrial, setSelectedTrial] = useState("skills");
-  const [isPending, startTransition] = useTransition();
-  const handleTrialClick = (id) => {
-    startTransition(() => {
-      setSelectedTrial(id);
-    });
-  }; */
-
   
   //modal 
   const [showModal, setShowModal] = useState(false);
@@ -31,6 +25,7 @@ const Booking = () => {
 
 
   //Handle form submission
+  
   const handleName = (e) => {
     setName(e.target.value);
   }
@@ -62,10 +57,7 @@ const Booking = () => {
           <div className=''>
             <h2 className='text-slate-gray text-4xl lg:text-6xl font-poppins font-bold leading-2 my-10'>Book Now</h2>
           </div>
-          {/*<div className='flex justify-center items-center'>
-            <Trial title='Trial' isSelected={selectedTrial === 'skills'} change={()=> handleTrialClick('skills') } />
-            <Trial title='Trial' isSelected={selectedTrial === 'trial'}  change={()=> handleTrialClick('trial')}/>
-          </div>*/}
+          
           <form>
             <div className='mb-8 lg:mb-10'>
               <label htmlFor="name" className="text-xl block mb-2 text-sea-green font-poppins font-bold">Name</label>
@@ -87,6 +79,7 @@ const Booking = () => {
                   <button type='submit' className='w-full py-4 px-6 bg-sea-green text-white outline-none rounded-full border-2 hover:border-[#eb9534]' onClick={handleSubmit}>BOOK NOW</button>
               </div>
             </form>
+      {/********** Modal **********/}
       {
         showModal && (
           <div className='  h-screen w-screen fixed top-0 left-0 flex justify-center items-center bg-black opacity-[0.7]' onClick={handleSubmit}>

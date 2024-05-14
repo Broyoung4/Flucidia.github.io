@@ -6,6 +6,7 @@ import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs
 const Gallery = () => {
   const scrollRef = useRef(null);
 
+  {/* Scroll to the next image */}
   const scroll = (direction) => {
     const { current } = scrollRef;
 
@@ -23,6 +24,7 @@ const Gallery = () => {
         <p className='text-xl font-montserrat text-sea-green mt-2'>check out our latest and popular styles</p>
          <button type="button" className="py-4 px-6 bg-sea-green text-white outline-none rounded-full border-2 hover:border-[#eb9534] mt-2">View More</button>
       </div>
+      {/* Gallery */}
       <div className='flex flex-1 lg:max-w-[50%] max-w-[100%] relative'>
         <div className='flex w-full overflow-x-scroll gap-10 galleryimage' ref={scrollRef}>
           {[images.Blackdredd2, images.Fade, images.Twostepdredd, images.Dredds1, images.whitecut].map((image, index) => (
@@ -34,6 +36,7 @@ const Gallery = () => {
           }
         
         </div>
+        {/**** Left and Right Buttons ****/}
         <div className='w-full flex justify-between items-center px-1 absolute bottom-[5%]'>
           <BsArrowLeftShort className="bg-sea-green text-white cursor-pointer text-4xl rounded-md " onClick={() => scroll('left')} />
           <BsArrowRightShort className="bg-sea-green text-white cursor-pointer text-4xl rounded-md " onClick={() => scroll('right')} />

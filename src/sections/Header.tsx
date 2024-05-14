@@ -1,6 +1,5 @@
-//import { images } from '../../constants';
+import images from '../constants/images'
 
-import Fade from '../assets/Fade.png';
 
 const Header = () => {
   return (
@@ -27,13 +26,11 @@ const Header = () => {
         <button className='py-4 px-6 bg-sea-green text-white outline-none rounded-full border-2 hover:border-[#eb9534]'><a href='#booking'>BOOK HERE</a></button>
       </div>
       <div className='relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40'>
-        <img src={Fade} alt='Fade' className='object-contain z-10 relative'/>
+        <img src={images.Fade} alt='Fade' className='object-contain z-10 relative'/>
       </div>
     </section>
   )
 }
-/*<div className='border border-red-500 h-screen'>
-  Header
-</div>*/
+
 
 export default Header

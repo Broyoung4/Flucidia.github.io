@@ -4,9 +4,12 @@ import { useState, useTransition } from 'react';
 
 
 const Team = () => {
+  {/* Tab Component */}
   const [selectedTab, setSelectedTab] = useState("Team");
   const [isPending, startTransition] = useTransition();
-  const handleTabClick = (id) => {
+
+  {/* Tab Component */}
+  const handleTabClick = (id: string) => {
     startTransition(() => {
       setSelectedTab(id);
     });
@@ -15,7 +18,7 @@ const Team = () => {
     <section className='max-container min-h-screen flex flex-col justify-center items-center w-full gap-6'>
       <h1 className="text-black text-4xl font-poppins font-bold leading-2 my-10">Meet The <span className='text-sea-green inline-block mt-3'>Team</span></h1>
       <div className='flex items-center justify-center gap-10'>
-       
+        {/********** Tab Component **********/}
         <Tab title='Team'isSelected={selectedTab=== 'Team'} change={() =>  handleTabClick('Team')}/>
         <Tab title='Barbers'isSelected={selectedTab=== 'Barbers'} change={() =>  handleTabClick('Barbers')}/>
         <Tab title='Location'isSelected={selectedTab=== 'Location'} change={() =>  handleTabClick('Location')}/>
@@ -25,7 +28,7 @@ const Team = () => {
       
         
       { 
-        isPending ? (<span class="loading-anim"></span>) : 
+        isPending ? (<span className="loading-anim"></span>) : 
         selectedTab=== 'Team' && (
       <div className='flex items-center justify-center flex-col'>
           <h2 className='text-slate-gray text-lg font-montserrat font-bold leading-2 my-6'>
@@ -40,7 +43,7 @@ const Team = () => {
        ) }
        {/********** Barbers **********/}
       { 
-        isPending ? (<span class="loading-anim"></span>) : 
+        isPending ? (<span className="loading-anim"></span>) : 
         selectedTab=== 'Barbers' && (
       <div className='flex items-center justify-center flex-col'>
           <h2 className='text-slate-gray text-lg font-montserrat font-bold leading-2 my-6'>
@@ -54,7 +57,7 @@ const Team = () => {
        ) }
        {/********** Location **********/}
       { 
-        isPending ? (<span class="loading-anim"></span>) : 
+        isPending ? (<span className="loading-anim"></span>) : 
         selectedTab=== 'Location' && (
       <div className='flex items-center justify-center flex-col'>
           <h2 className='text-slate-gray text-lg font-montserrat font-bold leading-2 my-6'>

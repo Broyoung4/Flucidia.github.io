@@ -1,5 +1,11 @@
+interface BarberBoxProps {
+  name: string;
+  imageSrc: string;
+  info: string;
+}
 
-const BarberBox = ({name, info, imageSrc }) => {
+
+const BarberBox = ({name, info, imageSrc }:BarberBoxProps ) => {
   return (
     <div className="flex flex-col justify-center items-center border border-white p-4 rounded-lg  w-[350px] bg-opacity-80 bg-white backdrop-blur-sm animate-slideup cursor-pointer">
       <h2 className="text-black text-2xl font-poppins font-bold leading-2 my-4">

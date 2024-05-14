@@ -1,10 +1,13 @@
 import { BsJustify } from "react-icons/bs"; 
 import { BsScissors } from "react-icons/bs";
 import {useState,useEffect} from 'react';
+
+
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-
+  
+/* function for remove navbaronscroll*/
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
       setToggle(false); 
@@ -16,6 +19,7 @@ const Nav = () => {
     setLastScrollY(window.scrollY); 
   };
 
+  /*useEffect for removeNavbaronscroll*/
   useEffect(() => {
     window.addEventListener('scroll', controlNavbar);
 
@@ -41,10 +45,15 @@ const Nav = () => {
         <a className="mx-4">Registration</a>
     
         </div>
+        
+        {/* hamburger */}
+          
         <div className='z-30 cursor-pointer sm:hidden flex'>
           {!toggle && <BsJustify size={30} color={'grey'}onClick={() => setToggle(true)} className='' />}
           {toggle && <BsScissors size={30} color={'green'} onClick={() => setToggle(false)} className='z-20' />}
         </div>
+          
+        {/* mobileMenu */}
         {toggle && (
       <div className='scale-in-ver-top absolute top-0 left-0 w-full h-70% flex justify-center items-center z-10 bg-black py-12 transition duration-500'>
         <ul className='flex flex-col justify-center items-center gap-10 text-white mt-10'>
