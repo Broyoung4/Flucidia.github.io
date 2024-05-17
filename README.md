@@ -7,4 +7,4 @@ This barbing salon app is an online platform that allows users to contact their 
 - React Ts
 - Tailwind css
 
-**Live Demo: [LIVE DEMO]([https://flucidia.vercel.app])**
+**Live Demo: [LIVE DEMO](https://flucidia.vercel.app)**
